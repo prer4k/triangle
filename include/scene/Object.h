@@ -12,7 +12,7 @@ public:
     Animation animation;
     Mesh mesh;
 
-    Object();
+    Object(glm::vec3 pos);
 
     void update(float time);
 

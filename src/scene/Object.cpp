@@ -61,9 +61,10 @@ std::vector<float> cube = {
     -0.5,-0.5,-0.5, 1,0,1,
 };
 
-Object::Object()
+Object::Object(glm::vec3 pos)
 : mesh(cube, 6)
 {
+    transform.position = pos;
 }
 
 void Object::update(float time)
