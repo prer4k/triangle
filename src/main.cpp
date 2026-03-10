@@ -40,6 +40,10 @@ int main()
             camera
         );
 
+        if (Input::isKeyPressed(GLFW_KEY_ESCAPE))
+        {
+            window.setCursorDisabled(false);
+        }
         window.swapBuffers();
         window.pollEvents();
     }

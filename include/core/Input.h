@@ -10,6 +10,9 @@ public:
 
     static bool isKeyPressed(int key);
 
+    static double getMouseX();
+    static double getMouseY();
+
 private:
 
     static GLFWwindow* window;

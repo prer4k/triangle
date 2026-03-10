@@ -29,6 +29,8 @@ Window::Window(int width, int height, const char* title)
     {
         std::cout << "Failed to initialize GLAD" << std::endl;
     }    
+
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 }
 
 GLFWwindow* Window::get()
@@ -49,4 +51,14 @@ void Window::swapBuffers()
 void Window::pollEvents()
 {
     glfwPollEvents();
+}
+
+void Window::setCursorDisabled(bool disabled)
+{
+    glfwSetInputMode(
+        window,
+        GLFW_CURSOR,
+        disabled ? GLFW_CURSOR_DISABLED
+                 : GLFW_CURSOR_NORMAL
+    );
 }

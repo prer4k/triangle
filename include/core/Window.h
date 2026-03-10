@@ -16,4 +16,6 @@ public:
     void swapBuffers();
 
     void pollEvents();
+
+    void setCursorDisabled(bool disabled);
 };
