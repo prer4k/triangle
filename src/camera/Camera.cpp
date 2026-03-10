@@ -121,3 +121,8 @@ glm::vec3 Camera::getFront()
 
     return glm::normalize(front);
 }
+
+void Camera::resetMouse()
+{
+    firstMouse = true;
+}

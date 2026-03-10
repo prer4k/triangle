@@ -32,4 +32,5 @@ public:
     glm::vec3 getFront();
 
     void update(float dt);
+    void resetMouse();
 };

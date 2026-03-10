@@ -6,6 +6,8 @@
 
 int main()
 {
+    bool mouseLocked = false;
+
     Window window(800,600,"engine");
     Input::setWindow(window.get());
 
@@ -40,9 +42,14 @@ int main()
             camera
         );
 
-        if (Input::isKeyPressed(GLFW_KEY_ESCAPE))
+        if (Input::isKeyPressed(GLFW_KEY_ESCAPE)) { window.setCursorDisabled(false); mouseLocked = false; }
+        if (!mouseLocked && Input::isMousePressed(GLFW_MOUSE_BUTTON_LEFT)) { window.setCursorDisabled(true); mouseLocked = true; }
+        if (!mouseLocked &&
+            Input::isMousePressed(GLFW_MOUSE_BUTTON_LEFT))
         {
-            window.setCursorDisabled(false);
+            window.setCursorDisabled(true);
+            camera.resetMouse();
+            mouseLocked = true;
         }
         window.swapBuffers();
         window.pollEvents();

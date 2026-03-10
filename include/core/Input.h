@@ -9,6 +9,7 @@ public:
     static void setWindow(GLFWwindow* window);
 
     static bool isKeyPressed(int key);
+    static bool isMousePressed(int button);
 
     static double getMouseX();
     static double getMouseY();

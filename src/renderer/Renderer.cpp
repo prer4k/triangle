@@ -64,9 +64,23 @@ void Renderer::draw(
         );
 
         glUniformMatrix4fv(
-            mLoc,1,GL_FALSE,
+            mLoc,
+            1,
+            GL_FALSE,
             glm::value_ptr(model)
         );
+
+        // bind texture
+        glActiveTexture(GL_TEXTURE0);
+        obj.texture.bind();
+
+        int texLoc =
+            glGetUniformLocation(
+                shader.ID,
+                "tex"
+            );
+
+        glUniform1i(texLoc, 0);
 
         obj.mesh.draw();
     }

@@ -12,6 +12,11 @@ bool Input::isKeyPressed(int key)
     return glfwGetKey(window, key) == GLFW_PRESS;
 }
 
+bool Input::isMousePressed(int button)
+{
+    return glfwGetMouseButton(window, button) == GLFW_PRESS;
+}
+
 double Input::getMouseX()
 {
     double x, y;
