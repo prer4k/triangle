@@ -10,8 +10,6 @@ Animation::Animation()
 
 void Animation::update(Transform& t, float time)
 {
-    t.position.x = cos(time) * radius;
-    t.position.y = sin(time) * radius;
-
-    t.rotation.z = time * speed;
+    t.rotation.y = time;
+    t.rotation.x = time * speed;
 }

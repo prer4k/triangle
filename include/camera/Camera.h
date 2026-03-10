@@ -13,8 +13,12 @@ public:
     float nearPlane;
     float farPlane;
 
+    float speed;
+
     Camera(float aspect);
 
     glm::mat4 getViewMatrix();
     glm::mat4 getProjectionMatrix();
+
+    void update(float dt);
 };

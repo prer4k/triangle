@@ -11,7 +11,7 @@ include_directories(src)
 
 add_executable(main 
 src/main.cpp src/glad.c src/core/Shader.cpp src/graphics/Mesh.cpp src/core/Window.cpp src/animation/Animation.cpp
-src/math/Transform.cpp src/renderer/Renderer.cpp src/scene/Object.cpp src/camera/Camera.cpp src/scene/Scene.cpp)
+src/math/Transform.cpp src/renderer/Renderer.cpp src/scene/Object.cpp src/camera/Camera.cpp src/scene/Scene.cpp src/core/Input.cpp)
 target_link_libraries(main
     OpenGL::GL
     glfw
