@@ -5,15 +5,21 @@ build/
 cmake-build-*/
 out/
 bin/
+/target/
 
-# CMake generated files
+# CMake / legacy C++ (ignore if present locally)
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile
+compile_commands.json
+CTestTestfile.cmake
+install_manifest.txt
+Testing/
 
 # Ninja
 build.ninja
+rules.ninja
 .ninja_log
 .ninja_deps
 

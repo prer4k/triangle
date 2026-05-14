@@ -4,30 +4,24 @@ Small modern OpenGL playground with a simple renderer-style architecture.
 
 Built with:
 
-- GLFW — window + OpenGL context
-- GLAD — OpenGL loader
-- GLM — math library
-- CMake — build system
+- **Rust** and **Cargo**
+- **glfw** — window + OpenGL context
+- **glow** — OpenGL bindings
+- **glam** — math types
+- **image** — texture loading
 
 ---
 
 ## Build
 
-```
-cmake -S . -B build
-cmake --build build
+```bash
+cargo build
 ```
 
 ## Run
 
-```
-./build/main
+```bash
+cargo run
 ```
 
-or
-
-```
-sh run
-```
 ---
-
